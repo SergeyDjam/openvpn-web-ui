@@ -1,4 +1,4 @@
-module github.com/adamwalach/openvpn-web-ui
+module github.com/rslota/openvpn-web-ui
 
 require (
 	github.com/Sirupsen/logrus v0.10.0

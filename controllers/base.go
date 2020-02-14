@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/adamwalach/openvpn-web-ui/models"
+	"github.com/rslota/openvpn-web-ui/models"
 	"github.com/astaxie/beego"
 )
 

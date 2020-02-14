@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"encoding/json"
-	"github.com/adamwalach/openvpn-web-ui/state"
+	"github.com/rslota/openvpn-web-ui/state"
 
 	mi "github.com/adamwalach/go-openvpn/server/mi"
 )

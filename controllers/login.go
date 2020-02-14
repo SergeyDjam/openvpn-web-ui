@@ -4,7 +4,7 @@ import (
 	"html/template"
 	"time"
 
-	"github.com/adamwalach/openvpn-web-ui/lib"
+	"github.com/rslota/openvpn-web-ui/lib"
 	"github.com/astaxie/beego"
 )
 

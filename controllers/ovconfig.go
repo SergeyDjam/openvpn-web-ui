@@ -1,14 +1,14 @@
 package controllers
 
 import (
-	"github.com/adamwalach/openvpn-web-ui/state"
+	"github.com/rslota/openvpn-web-ui/state"
 	"html/template"
 	"path/filepath"
 
 	"github.com/adamwalach/go-openvpn/server/config"
 	mi "github.com/adamwalach/go-openvpn/server/mi"
-	"github.com/adamwalach/openvpn-web-ui/lib"
-	"github.com/adamwalach/openvpn-web-ui/models"
+	"github.com/rslota/openvpn-web-ui/lib"
+	"github.com/rslota/openvpn-web-ui/models"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 )

@@ -2,7 +2,7 @@ package lib
 
 import (
 	"fmt"
-	"github.com/adamwalach/openvpn-web-ui/state"
+	"github.com/rslota/openvpn-web-ui/state"
 	"io/ioutil"
 	"os/exec"
 	"strings"
