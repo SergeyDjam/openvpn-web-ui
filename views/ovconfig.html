@@ -116,6 +116,15 @@
       </div>
 
       <div class="form-group">
+        <label for="name">PushRoutes</label>
+        <input type="text" class="form-control" name="PushRoutes" id="PushRoutes" placeholder=""
+          value="{{ .Settings.PushRoutes }}">
+        <span id="helpBlock" class="help-block">
+          Whether to push default gateway to clients.
+        </span>
+      </div>
+
+      <div class="form-group">
         <label for="name">MaxClients</label>
         <input type="text" class="form-control" name="MaxClients" id="MaxClients" placeholder=""
           value="{{ .Settings.MaxClients }}">

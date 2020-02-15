@@ -12,7 +12,7 @@ WORKDIR /opt
 COPY --from=builder /go/src/github.com/rslota/openvpn-web-ui/openvpn-web-ui.tar.gz .
 
 RUN mkdir -p /opt/openvpn-gui
-RUN tar -xf openvpn-web-ui.tar.gz -C /opt/openvpn-gui
+RUN tar -xf openvpn-web-ui.tar.gz -C /opt/openvpn-gui && rm -rf openvpn-web-ui.tar.gz
 
 RUN apt-get update && apt-get install -y easy-rsa
 RUN chmod 755 /usr/share/easy-rsa/*

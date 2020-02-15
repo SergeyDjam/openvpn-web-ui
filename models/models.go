@@ -1,11 +1,10 @@
 package models
 
 import (
-	"fmt"
 	"os"
 	"path/filepath"
 
-	"github.com/adamwalach/go-openvpn/server/config"
+	"github.com/rslota/go-openvpn/server/config"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	"gopkg.in/hlandau/passlib.v1"
@@ -60,11 +59,16 @@ func CreateDefaultUsers() {
 }
 
 func CreateDefaultSettings() (*Settings, error) {
+	serverPort, err := beego.AppConfig.Int("OpenVpnServerPort")
+	if err != nil {
+        return nil, err
+    }
 	s := Settings{
 		Profile:       "default",
 		MIAddress:     beego.AppConfig.String("OpenVpnManagementAddress"),
 		MINetwork:     beego.AppConfig.String("OpenVpnManagementNetwork"),
 		ServerAddress: beego.AppConfig.String("OpenVpnServerAddress"),
+		ServerPort:    serverPort,
 		OVConfigPath:  beego.AppConfig.String("OpenVpnPath"),
 	}
 	o := orm.NewOrm()
@@ -80,7 +84,7 @@ func CreateDefaultSettings() (*Settings, error) {
 	}
 }
 
-func CreateDefaultOVConfig(configDir string, ovConfigPath string, address string, network string) {
+func CreateDefaultOVConfig(configDir string, ovConfigPath string) {
 	c := OVConfig{
 		Profile: "default",
 		Config: config.Config{
@@ -92,7 +96,8 @@ func CreateDefaultOVConfig(configDir string, ovConfigPath string, address string
 			Dh:                  filepath.Join(ovConfigPath, "dh2048.pem"),
 			Keepalive:           "10 120",
 			IfconfigPoolPersist: "ipp.txt",
-			Management:          fmt.Sprintf("%s %s", address, network),
+			PushRoutes:			 true,
+			Management:          "0.0.0.0 2080",
 			MaxClients:          100,
 			Server:              "10.8.0.0 255.255.255.0",
 			Ca:                  filepath.Join(ovConfigPath, "keys/ca.crt"),

@@ -30,7 +30,7 @@ func main() {
 		panic(err)
 	}
 
-	models.CreateDefaultOVConfig(*configDir, defaultSettings.OVConfigPath, defaultSettings.MIAddress, defaultSettings.MINetwork)
+	models.CreateDefaultOVConfig(*configDir, defaultSettings.OVConfigPath)
 
 	state.GlobalCfg = *defaultSettings
 

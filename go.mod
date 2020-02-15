@@ -2,7 +2,7 @@ module github.com/rslota/openvpn-web-ui
 
 require (
 	github.com/Sirupsen/logrus v0.10.0
-	github.com/adamwalach/go-openvpn v0.0.0-20170320215004-37de024281f7
+	github.com/rslota/go-openvpn v0.0.0-20170320215004-37de024281f7
 	github.com/astaxie/beego v1.10.0
 	github.com/cloudfoundry/gosigar v0.0.0-20160602191207-c32d31af94b0
 	github.com/go-ldap/ldap/v3 v3.1.5

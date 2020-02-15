@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/adamwalach/go-openvpn/client/config"
+	"github.com/rslota/go-openvpn/client/config"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )

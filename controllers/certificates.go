@@ -3,7 +3,7 @@ package controllers
 import (
 	"bytes"
 	"fmt"
-	"github.com/adamwalach/go-openvpn/client/config"
+	"github.com/rslota/go-openvpn/client/config"
 	"github.com/rslota/openvpn-web-ui/lib"
 	"github.com/rslota/openvpn-web-ui/models"
 	"github.com/rslota/openvpn-web-ui/state"
@@ -113,6 +113,7 @@ func validateCertParams(cert NewCertParams) map[string]map[string]string {
 func (c *CertificatesController) saveClientConfig(keysPath string, name string) (string, error) {
 	cfg := config.New()
 	cfg.ServerAddress = state.GlobalCfg.ServerAddress
+	cfg.ServerPort = state.GlobalCfg.ServerPort
 	ca, err := ioutil.ReadFile(filepath.Join(keysPath, "ca.crt"))
 	if err != nil {
 		return "", err

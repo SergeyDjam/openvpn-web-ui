@@ -18,6 +18,7 @@ type Settings struct {
 	OVConfigPath string `orm:"size(64);unique" form:"OVConfigPath" valid:"Required;"`
 
 	ServerAddress string `orm:"size(64);unique" form:"ServerAddress" valid:"Required;"`
+	ServerPort int `orm:"" form:"ServerPort" valid:"Required;"`
 
 	Created time.Time `orm:"auto_now_add;type(datetime)"`
 	Updated time.Time `orm:"auto_now;type(datetime)"`

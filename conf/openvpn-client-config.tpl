@@ -3,7 +3,7 @@ persist-tun
 persist-key
 client
 resolv-retry infinite
-remote {{ .ServerAddress }} {{ .Port }} {{ .Proto }}
+remote {{ .ServerAddress }} {{ .ServerPort }} {{ .Proto }}
 lport 0
 cipher {{ .Cipher }}
 auth {{ .Auth }}

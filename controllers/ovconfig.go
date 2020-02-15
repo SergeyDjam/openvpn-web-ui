@@ -5,8 +5,8 @@ import (
 	"html/template"
 	"path/filepath"
 
-	"github.com/adamwalach/go-openvpn/server/config"
-	mi "github.com/adamwalach/go-openvpn/server/mi"
+	"github.com/rslota/go-openvpn/server/config"
+	mi "github.com/rslota/go-openvpn/server/mi"
 	"github.com/rslota/openvpn-web-ui/lib"
 	"github.com/rslota/openvpn-web-ui/models"
 	"github.com/astaxie/beego"

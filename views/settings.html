@@ -39,6 +39,12 @@
       </div>
 
       <div class="form-group">
+        <label for="name">Server Port (external)</label>
+        <input type="text" class="form-control" id="ServerPort" name="ServerPort" placeholder="Enter server port"
+          value="{{ .Settings.ServerPort }}">
+      </div>
+
+      <div class="form-group">
         <label for="name">ConfigPath</label>
         <input type="text" class="form-control" id="OVConfigPath" name="OVConfigPath" placeholder="Enter config path"
           value="{{ .Settings.OVConfigPath }}">
